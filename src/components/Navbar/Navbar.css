@@ -1,0 +1,9 @@
+.Navbar{
+    display: flex;
+    background-color: grey;
+}
+
+.img{
+    width: 2%;
+    margin-left: 100vh;
+}
