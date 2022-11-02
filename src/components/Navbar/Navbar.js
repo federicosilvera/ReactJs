@@ -1,12 +1,14 @@
 import CategoryButton from "../CategoryButton/CategoryButton";
 import './Navbar.css';
 import cart from "../CartWidget/img/carrito.png";
+import {Link} from "react-router-dom";
 
-function Navbar() {
+
+const Navbar =({name})=> {
     return (
         <div className="Navbar">
-        <div><b>Feditos-Shop</b></div>
-        <CategoryButton name='AMD'/>
+       <Link to="./"> <div><b>Feditos-Shop</b></div> </Link>
+        <Link to ={`/category/${name}`}> <CategoryButton name='AMD'/></Link> 
         <CategoryButton name='Intel'/>
         <CategoryButton name='Contactame'/>
         <img className='img' alt='' src={cart}/>

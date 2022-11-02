@@ -1,27 +1,23 @@
 import productos from "./arrayProductos"
 import Item from "./Item";
-import React, {  useEffect} from "react";
+import React, { useState, useEffect} from "react";
 
 function ItemList () {
 
-    
+    const [listProducts, setListProducts]= useState([])
 
     const productosPromise =()=>{
-        let product = require ("./arrayProductos")
+        
         return new Promise ((resolve, reject)=>{
             setTimeout(()=>{
-                resolve(product)
+                resolve(productos)
                 
             }, 2000)
         })
     }
-
+    
     useEffect(()=>{
-        async function fetchedProduct(){
-            const product = await productosPromise();
-            return product;
-        }
-        fetchedProduct()
+       productosPromise().then(res=>setListProducts(res))
         
     }, []);
 
@@ -30,7 +26,7 @@ function ItemList () {
         <div>
         { 
         
-        productos.map((producto, i)=> (
+        listProducts.map((producto, i)=> (
             <div className="App" > 
             <h1>Equipos</h1>
              <Item key={i}

@@ -3,6 +3,7 @@ import ItemListContainer from './components/Container/ItemListContainer';
 import Navbar from './components/Navbar/Navbar';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ItemDetailContainer from './components/Container/ItemDetailContainer';
 
 
 function App() {
@@ -12,10 +13,10 @@ function App() {
       <BrowserRouter>
             <Navbar/>
             <Routes>
-                <Route path="/" element={<ItemListContainer />}></Route>
-                <Route path="/category/:id" element={<ItemListContainer />}></Route>
-                <Route path="/category/:category" element={<ItemListContainer />}></Route>
-                <Route path="/item/:id" element={<ItemListContainer />}></Route>
+                <Route exact path="/" element={<ItemListContainer />}></Route>
+                <Route exact path="/category/:id" element={<ItemListContainer />}></Route>
+                <Route exact path="/category/:category" element={<ItemListContainer />}></Route>
+                <Route exact path="/item/:id" element={<ItemDetailContainer />}></Route>
             </Routes>
         </BrowserRouter>
      

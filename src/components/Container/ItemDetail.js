@@ -1,4 +1,5 @@
-
+import productos from "./arrayProductos";
+import Item from "./Item";
 function ItemDetail (){
     return (
         <div>
@@ -18,3 +19,5 @@ function ItemDetail (){
              </div>
     )
 }
+
+export default ItemDetail;
