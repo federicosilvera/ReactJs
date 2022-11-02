@@ -1,6 +1,7 @@
 .Navbar{
     display: flex;
     background-color: grey;
+    justify-content: center;
 }
 
 .img{

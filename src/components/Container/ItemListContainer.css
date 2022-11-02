@@ -1,0 +1,15 @@
+.App{
+    background-color: grey;
+    width: 200px;
+    border: 1px black solid;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.precio{
+    padding: 10px;
+}
+
+img{
+    width: 200px;
+}
