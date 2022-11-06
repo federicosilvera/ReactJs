@@ -8,8 +8,8 @@ const Navbar =({name})=> {
     return (
         <div className="Navbar">
        <Link to="./"> <div><b>Feditos-Shop</b></div> </Link>
-        <Link to ={`/category/${name}`}> <CategoryButton name='AMD'/></Link> 
-        <CategoryButton name='Intel'/>
+        <Link to ="./category/AMD"> <CategoryButton name='AMD'/></Link> 
+       <Link to ="./category/Intel"> <CategoryButton name='Intel'/></Link>
         <CategoryButton name='Contactame'/>
         <img className='img' alt='' src={cart}/>
         </div>
